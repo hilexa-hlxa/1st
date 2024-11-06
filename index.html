@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheraGuide</title>
+    <link rel="stylesheet" href="styles_main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">TheraGuide</div>
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Contacts</a>
+                <button class="join-button">Join Us</button>
+                <button class="sign-in-button">Log In</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Become a better person</h1>
+                <p>Unlock your potential and grow in every aspect of life. <br> Discover tools, strategies, and insights to enhance your personal well-being, improve relationships, and achieve your goals. <br> Join a community dedicated to lifelong learning and personal growth.</p>
+                <button class="cta-button">Join Today</button>
+            </div>
+            <div class="hero-image">
+                <img src="freepik-export-20241106055403Unsg.png" alt="">
+            </div>
+        </section>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="What are you looking for?">
+            <button onclick="searchFunction()">Search</button>
+            <div class="popular-searches">
+                <span>Popular Searches:</span>
+                <a href="#" onclick="openModal('anxietyModal')">Anxiety</a>
+                <a href="#" onclick="openModal('depressionModal')">Depression</a>
+                <a href="#" onclick="openModal('selfRespectModal')">Self-Respect</a>
+            </div>
+        </section>
+        <section class="card-section">
+            <div class="card" onclick="openCase(1)">Case 1</div>
+            <div class="card" onclick="openCase(2)">Case 2</div>
+            <div class="card" onclick="openCase(3)">Case 3</div>
+            <div class="card" onclick="openCase(4)">Case 4</div>
+            <div class="card" onclick="openCase(5)">Case 5</div>
+            <div class="card" onclick="openCase(6)">Case 6</div>
+        </section>
+    </main>
+    <div id="anxietyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('anxietyModal')">&times;</span>
+            <h2>Anxiety</h2>
+            <p>What it is: Anxiety is a feeling of worry, nervousness, or unease, often about uncertain outcomes. It’s a natural response to stress and can even be helpful in short bursts, like motivating us to prepare for an important event. However, when anxiety becomes chronic and overwhelming, it can interfere with daily life and prevent us from living fully. <br>
+                <br>
+                Why it happens: Anxiety often arises from stressors or fears related to work, relationships, health, or major life changes. For some, it can be triggered by past trauma or a deeply ingrained habit of “what-if” thinking. Anxiety also has a physical component: our bodies respond to perceived threats by activating the “fight-or-flight” response, causing symptoms like a racing heart, sweating, and rapid breathing. <br>
+                <br>
+                Ways to manage it: Managing anxiety begins with grounding yourself in the present moment. Breathing exercises, mindfulness, and grounding techniques (such as noticing things you see, hear, and feel around you) can calm your mind. Cognitive behavioral therapy can help you challenge anxious thoughts and replace them with healthier ones. Regular exercise, sufficient sleep, and reducing caffeine intake can also help stabilize your nervous system. Remember, it’s okay to seek professional help if anxiety is affecting your quality of life. Therapy and, if needed, medication can provide substantial relief.</p> <br>
+                <br>
+            </div>
+    </div>
+    
+    <div id="depressionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('depressionModal')">&times;</span>
+            <h2>Depression</h2>
+            <p>What it is: Depression is more than sadness—it’s a deep, pervasive feeling of hopelessness that can affect every aspect of life. It often brings feelings of worthlessness, loss of interest in activities, fatigue, and difficulty concentrating. Depression is a complex mental health condition that affects millions and can be triggered by genetic, biological, environmental, and psychological factors. <br>
+                <br>
+                Why it happens: Depression can stem from many sources: personal loss, trauma, chronic stress, chemical imbalances, and even family history. For some, it’s a response to an external situation; for others, it may appear without an obvious reason. Regardless of the cause, depression is a real and challenging experience that deserves attention and support. <br>
+                <br> 
+                Path to healing: Healing from depression takes time and may involve multiple approaches. Therapy, such as cognitive behavioral therapy (CBT), can help you address negative thought patterns. Medications, prescribed by a doctor, can also be effective in managing symptoms. Lifestyle changes, like regular exercise, getting sunlight, maintaining a routine, and connecting with supportive people, can also help uplift mood and energy. Remember, you don’t have to fight it alone—reach out to friends, family, or mental health professionals for support.</p> <br>
+                <br>
+            </div>
+    </div>
+    
+    <div id="selfRespectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('selfRespectModal')">&times;</span>
+            <h2>Self-Respect</h2>
+            <p>What it is: Self-respect is the value you place on yourself. It’s a recognition of your worth, a belief that you deserve love, care, and dignity. When you respect yourself, you set healthy boundaries, make choices that align with your values, and prioritize your own well-being. <br>
+                <br>
+                Why it matters: Self-respect is the foundation of a fulfilling life. Without it, we may find ourselves in relationships or situations that drain us, unable to say “no” or voice our needs. Self-respect empowers us to live authentically, honor our strengths, and accept our imperfections. <br>
+                <br>
+                How to nurture it: Building self-respect begins with self-acceptance. Practice compassion toward yourself, especially when things go wrong. Reflect on your values, set boundaries that protect your peace, and surround yourself with people who support and uplift you. Activities like journaling, setting achievable goals, and celebrating small victories can reinforce self-respect over time. <br>
+                <br>
+                </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="textpartners">USED AND LOVED BY:</div>
+        <div class="brand-logos">
+            <img src="jihc-logo-png-v1.png" alt="Brand 1">
+            <img src="sdu.png" alt="Brand 2">
+        </div>
+    </footer>
+
+    <script>
+        // Фуншкн чтобы открыть всплывающее окно
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+        // Чтоб закрыть
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+        // Закрыть когда нажимаешь за границу модальки
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+};
+
+// Недоделанный поисковик
+function searchFunction() {
+    let query = document.getElementById("searchInput").value;
+    alert("You searched for: " + query);
+}
+    </script>
+</body>
+</html>
