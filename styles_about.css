@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles */
+body {
+    background-color: #f6f2ed;
+    padding-bottom: 8%;
+    padding-left: 10%;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav a, .join-button, .sign-in-button {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+button {
+    width: 70px;
+    height: 20px;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.box {
+    background-color: white;
+    height: 52vw;
+    width: 80vw;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em; /* Adjusted to avoid overlap with header */
+}
+
+.text_message {
+    padding: 5%;
+    font-size: 1.5em;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Adjust header for mobile view */
+    header {
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #222;
+    }
+
+    .header-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.8em;
+        margin-bottom: 0.5em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .sign-in-button {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: auto;
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+
+    /* Adjust other content */
+    .box {
+        width: 90%;
+        padding: 2em 1em;
+        margin-top: 8em; /* to avoid overlap with header */
+    }
+
+    .text_message {
+        font-size: 1em;
+    }
+}
